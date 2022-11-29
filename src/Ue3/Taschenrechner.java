@@ -3,22 +3,23 @@ package Ue3;
 import java.util.Scanner;
 
 public class Taschenrechner {
-    public static String o;
-    public static int w1;
-    public static int w2;
-    public static int erg;
-    static boolean berechne;
-    static Scanner eingabe = new Scanner(System.in);
-    public static void einlesen() {
+    String o;
+    int w1;
+    int w2;
+    int erg;
+    boolean berechne;
+    Scanner eingabe = new Scanner(System.in);
+    public void einlesen() {
         System.out.println("Bitte geben Sie ein Operant (a=Addition, s=Subtration, m=Multiplikation & d=Division) ein.");
-        String o = eingabe.nextLine();
+        o = eingabe.nextLine();
         System.out.println("Bitte geben Sie den ersten Wert ein.");
-        String w1 = eingabe.nextLine();
+        w1 = eingabe.nextInt();
         System.out.println("Bitte geben Sie den zweiten Wert ein.");
-        String w2 = eingabe.nextLine();
+        w2 = eingabe.nextInt();
     }
 
-    public static boolean berechne() {
+    /*
+    public boolean berechne() {
         if (o == "a") {
             erg = w1 + w2;
             return true;
@@ -34,22 +35,36 @@ public class Taschenrechner {
         } else if (o == "") {
             System.out.println("Bitte geben Sie ein Operanten ein.");
             return true;
+        } else {
+            System.out.println("Bitte geben Sie ein Wert von oben ein.");
         }
         return false;
     }
-
-    public static void ausgeben() {
-
-        if (berechne == true) {
-            System.out.println("Ihre Berechnung war:" + w1 + o + w2);
-            System.out.println("Ihr Ergebnis lautet:" + erg);
+    */
+    public void berechne() {
+        if (o == "a") {
+            erg = w1 + w2;
+        } else if (o == "s") {
+            erg = w1 - w2;
+        } else if (o == "m") {
+            erg = w1 * w2;
+        } else if (o == "d") {
+            erg = w1 / w2;
+        } else {
+            erg = w1 + w2;
         }
     }
 
+    public void ausgeben() {
+
+        //    System.out.println("Ihre Berechnung war:" + w1 + o + w2);
+            System.out.println("Ihr Ergebnis lautet:" + erg);
+    }
+
     public static void main(String[] args) {
-        System.out.println("Hello world!");
-        einlesen();
-        berechne();
-        ausgeben();
+        Taschenrechner taschenrechner = new Taschenrechner();
+        taschenrechner.einlesen();
+        taschenrechner.berechne();
+        taschenrechner.ausgeben();
     }
 }
