@@ -2,8 +2,7 @@ package Ue3;
 
 import java.util.Scanner;
 
-public class Ue1 {
-
+public class Taschenrechner {
     public static String o;
     public static int w1;
     public static int w2;
