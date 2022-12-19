@@ -22,7 +22,38 @@ public class Rechteck {
     }
 
     public void zeichne() {
-        for (int i = 0; i < h; i++) {
+
+        b = b - 1;
+        h = h - 1;
+
+        for (int y = 0; y <=h; y++) {
+
+            if (y == 0 || y == h) {
+                // Erste Zeile und letzte Zeile
+                for (int x = 0; x <= b; x++) {
+                    if (x == 0) {
+                        System.out.print("+");
+                    } else if (x < b) {
+                        System.out.print("-");
+                    } else if (x == b) {
+                        System.out.print("+\n");
+                    }
+                }
+            } else if (y < h) {
+                // Zwischenzeile
+                for (int x = 0; x <= b; x++) {
+                    if (x == 0) {
+                        System.out.print("-");
+                    } else if (x < b) {
+                        System.out.print(fe);
+                    } else if (x == b) {
+                        System.out.print("-\n");
+                    }
+                }
+            }
+        }
+
+        /*for (int i = 0; i < h; i++) {
             for (int j = 0; j < b; j++) {
                 if (i % h == 0 || j % b == 0 || (i + j) % 6 == 5 || (h - i + j) % 6 == 5) {
                     System.out.print("-");
@@ -30,8 +61,9 @@ public class Rechteck {
                     System.out.print(fe);
                 }
             }
-            System.out.println();
         }
+
+         */
     }
 
     public static void main(String[] args) {

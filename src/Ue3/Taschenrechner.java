@@ -18,7 +18,7 @@ public class Taschenrechner {
         w2 = eingabe.nextInt();
     }
 
-    /*
+
     public boolean berechne() {
         if (o == "a") {
             erg = w1 + w2;
@@ -40,8 +40,8 @@ public class Taschenrechner {
         }
         return false;
     }
-    */
-    public void berechne() {
+
+   /* public void berechne() {
         if (o == "a") {
             erg = w1 + w2;
         } else if (o == "s") {
@@ -54,11 +54,23 @@ public class Taschenrechner {
             erg = w1 + w2;
         }
     }
+    */
 
     public void ausgeben() {
 
         //    System.out.println("Ihre Berechnung war:" + w1 + o + w2);
             System.out.println("Ihr Ergebnis lautet:" + erg);
+            System.out.println("Weiter?");
+
+            String p = eingabe.nextLine();
+            if (p == "y") {
+                einlesen();
+            } else if ( p == "n") {
+                return;
+            } else {
+                System.out.println("Falsche Eingabe");
+                ausgeben();
+            }
     }
 
     public static void main(String[] args) {
