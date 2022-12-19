@@ -43,27 +43,15 @@ public class Rechteck {
                 // Zwischenzeile
                 for (int x = 0; x <= b; x++) {
                     if (x == 0) {
-                        System.out.print("-");
+                        System.out.print("|");
                     } else if (x < b) {
                         System.out.print(fe);
                     } else if (x == b) {
-                        System.out.print("-\n");
+                        System.out.print("|\n");
                     }
                 }
             }
         }
-
-        /*for (int i = 0; i < h; i++) {
-            for (int j = 0; j < b; j++) {
-                if (i % h == 0 || j % b == 0 || (i + j) % 6 == 5 || (h - i + j) % 6 == 5) {
-                    System.out.print("-");
-                } else {
-                    System.out.print(fe);
-                }
-            }
-        }
-
-         */
     }
 
     public static void main(String[] args) {
