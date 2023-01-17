@@ -2,7 +2,7 @@ package Ue3;
 
 import java.util.Scanner;
 
-public class Rechteck {
+public class RechteckNeu {
     // Wert Höhe
     int h;
     // Wert Breite
@@ -22,20 +22,21 @@ public class Rechteck {
     }
 
     public void zeichne() {
-        for (int i = 0; i < h; i++) {
-            for (int j = 0; j < b; j++) {
-                if (i % h == 0 || j % b == 0 || (i + j) % 6 == 5 || (h - i + j) % 6 == 5) {
-                    System.out.print("-");
-                } else {
-                    System.out.print(fe);
-                }
+        int i = 0;
+        int j = 0;
+
+        while (b > 1) {
+            if (i > b) {
+                String m = "-";
+            } else if (i == b) {
+                String p = "+";
             }
-            System.out.println();
         }
+        System.out.println("+");
     }
 
     public static void main(String[] args) {
-        Rechteck rechteck = new Rechteck();
+        RechteckNeu rechteck = new RechteckNeu();
         rechteck.eingabe();
         rechteck.zeichne();
     }
