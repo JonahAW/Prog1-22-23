@@ -40,3 +40,11 @@ public class Rechteck {
         rechteck.zeichne();
     }
 }
+
+class Personal {
+    // Eigenschaften, Konstruktor, getter und setter, KEIN “IO”
+    public String gibDatensatz(){
+        // alle Eigenschaften in einem String zurückgeben
+        return null;
+    }
+}

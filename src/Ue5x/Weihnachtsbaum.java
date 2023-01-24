@@ -44,7 +44,7 @@ class Kerze extends Schmuck{
     }
 }
 
-class Weihnachtsbaum(){
+class Weihnachtsbaum{
 
     public static void main(String[] a){
         Baum baum = new Baum();
