@@ -23,31 +23,30 @@ public class Pverw {
         objP.setPNr(pnr[n-1]);
     }
 
+    public Personal sucheAeltestePerson(Personal[] objP){							// Liste aller Personen an die Funktion übergeben
 
-    public Personal sucheAeltestePerson(Personal[] objP){							// Liste aller Personen an die Funktion �bergeben
+        int gefunden = 0; 													// ist der Index des bislang ältesten MA
 
-        int gefunden = 0; 													// ist der Index des bislang �ltesten MA
-
-        // Paarweiser Vergleich, wenn eine j�ngere Person gefunden wurde, dann deren Index merken
+        // Paarweiser Vergleich, wenn eine jüngere Person gefunden wurde, dann deren Index merken
         for (int i = 0; i<4; i++){
             if (objP[gefunden].getGeburtsjahr() > objP[i+1].getGeburtsjahr()){			// Vergleiche zwei Personen aus der Liste...
-                gefunden = i+1;											// ...und merke dir den �lteren von Beiden
+                gefunden = i+1;											// ...und merke dir den älteren von Beiden
             }
         }
-        return objP[gefunden]; 												// Einfach Objekt zur�ckgeben
+        return objP[gefunden]; 												// Einfach Objekt zurückgeben
     }
 
 
     public void erhoeheFrauenGehalt(Personal[] objP) {								// Liste aller Personen an die Funktion �bergeben
 
-        System.out.println("  ... Um wieviel % soll das Gehalt der Frauen erh�ht werden? ");
+        System.out.println("  ... Um wieviel % soll das Gehalt der Frauen erhöht werden? ");
         Scanner scanner = new Scanner(System.in);
         double mehrGehalt = scanner.nextInt();
 
         for (int i = 0; i<5 ; i++) {											// Liste der Personen abarbeiten
             if (objP[i].getGeschlecht() == "w") {									// Wenn eine Frau gefunden wurde...
                 objP[i].setGehalt((1.0 + mehrGehalt/100.0) * objP[i].getGehalt());   		//...dann Gehalt um X% erh�hen
-                System.out.println("... Ge�nderter Datensatz: " + objP[i].gibDatensatz());  	// Ausgabe des neuen Datensatzes
+                System.out.println("... Geänderter Datensatz: " + objP[i].gibDatensatz());  	// Ausgabe des neuen Datensatzes
             }
         }
     }
@@ -78,7 +77,7 @@ public class Pverw {
         switch (Eingabe) {  			// reagiert auf den Wert der Variable "Eingabe"
             case 1:					// case um einzelne Fälle aufzulisten
                 System.out.println(" ... Ältesteste Mitarbeiter anzeigen");
-                break;				// Verhindert die Ausführung der n�chsten Case-Zeile
+                break;				// Verhindert die Ausführung der nächsten Case-Zeile
             case 2:
                 System.out.println(" ... Frauen mehr Lohn geben");
                 break;
