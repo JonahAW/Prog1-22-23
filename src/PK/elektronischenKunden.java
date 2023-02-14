@@ -14,7 +14,7 @@ class Kunde {
         for(int i=0; i<gekaufteProdListe.length; i++) {
             neu[i] = gekaufteProdListe[i];
         }
-        for(int i=gekaufteProdListe.length; i<new.length; i++) {
+        for(int i=gekaufteProdListe.length; i<neu.length; i++) {
             neu[i] = p;
         }
 
